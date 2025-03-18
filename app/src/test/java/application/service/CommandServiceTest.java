@@ -36,9 +36,8 @@ public class CommandServiceTest {
     public void invalidCommandWillThrowAnException() {
         CommandService service = new CommandService();
         Robot robot = robot(0, 0, Orientation.N);
-        Assertions.assertThrows(Exception.class, () -> {
-            service.executeCommands(robot, "N");
-        });
+        Assertions.assertThrows(Exception.class, () -> service.executeCommands(robot, "N")
+        );
     }
 
     private Robot robot(int startX, int startY, Orientation startOrientation) {
